@@ -1,7 +1,6 @@
 package com.mycode.myproject.junit;
 
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
+import static org.junit.Assert.*;
 import junit.framework.TestCase;
 
 import org.junit.After;
@@ -13,7 +12,7 @@ import org.junit.Test;
 import com.mycode.myproject.Point;
 import com.mycode.myproject.Window;
 
-public class WindowTest extends TestCase {
+public class WindowTest  {
 
 	
 	Window myWindow = null;
@@ -56,6 +55,31 @@ public class WindowTest extends TestCase {
 		fail("xxxNot yet implemented");
 	}
 	*/
+	
+	
+	@Test
+	public void test_true_() {
+		
+		
+		
+		boolean result = true;
+		
+		assertTrue( result );
+		
+	}
+	
+	
+	
+	@Test
+	public void test_false() {
+		
+		
+		
+		boolean result = false;
+		
+		assertTrue( result );
+		
+	}
 	
 	
 	@Test
