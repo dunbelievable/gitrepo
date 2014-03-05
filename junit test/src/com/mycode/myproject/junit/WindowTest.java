@@ -2,6 +2,7 @@ package com.mycode.myproject.junit;
 
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
+import junit.framework.TestCase;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -12,7 +13,7 @@ import org.junit.Test;
 import com.mycode.myproject.Point;
 import com.mycode.myproject.Window;
 
-public class WindowTest {
+public class WindowTest extends TestCase {
 
 	
 	Window myWindow = null;
@@ -49,10 +50,12 @@ public class WindowTest {
 	
 	}
 
+	/*
 	@Test
 	public void testIsPointWithinWindow() {
-		fail("Not yet implemented");
+		fail("xxxNot yet implemented");
 	}
+	*/
 	
 	
 	@Test
@@ -67,8 +70,23 @@ public class WindowTest {
 	}
 	
 	@Test
+	public void test_IsPointWithinWindow_75_150_() {
+		
+		Point p = new Point(75,150);
+		
+		boolean pointIsWithinWindow = myWindow.isPointWithinWindow(p);
+		
+		assertTrue( pointIsWithinWindow );
+	}
+	
+	@Test
 	public void test_IsPointWithinWindow_150_150_() {
-		fail("Not yet implemented");
+		
+		Point p = new Point(150,150);
+		
+		boolean pointIsWithinWindow = myWindow.isPointWithinWindow(p);
+		
+		assertTrue( pointIsWithinWindow );
 	}
 	
 }
